@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chatter · Messenger UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="brand">
+        <span class="brand-mark">◈</span>
+        <span class="brand-name">Chatter</span>
+      </div>
+      <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle dark mode">◐</button>
+    </div>
+    <div class="status-line">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="status">Online</span>
+    </div>
+    <ul id="conversations" class="conversations"></ul>
+    <div class="sidebar-foot">
+      <button id="clearBtn" class="ghost-btn" type="button">Clear this conversation</button>
+    </div>
+  </aside>
+
+  <main class="thread">
+    <header class="thread-head">
+      <div class="thread-avatar" id="threadAvatar">D</div>
+      <div class="thread-meta">
+        <h1 id="threadName">Design team</h1>
+        <p id="threadSub">Active now</p>
+      </div>
+    </header>
+
+    <div id="messages" class="messages" aria-live="polite"></div>
+
+    <div id="typing" class="typing" hidden>
+      <span class="dots-anim"><i></i><i></i><i></i></span>
+      <span class="typing-label">typing</span>
+    </div>
+
+    <div id="emojiBar" class="emoji-bar"></div>
+
+    <form class="composer" id="composer">
+      <input id="input" type="text" autocomplete="off" placeholder="Write a message" aria-label="Message">
+      <button id="sendBtn" class="send-btn" type="submit">Send</button>
+    </form>
+    <p class="hint">Enter or Send appends your message · click an emoji to insert it · ◐ switches theme</p>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
